@@ -1,0 +1,369 @@
+html{
+    font-size: 20px;
+}
+* {
+    padding: 0;
+    margin: 0;
+    font-family: Poppins, system-ui, -apple-system,
+    BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans',
+    'Helvetica Neue', sans-serif;
+}
+
+body {
+    background-color: #44d58f;
+    color: white;
+}
+header {
+    margin-bottom: 1rem;
+    background-color: white;
+    padding: 0.8rem;
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    border-bottom: 4px solid #27a557;
+}
+
+a {
+    text-decoration: none;
+}
+
+h3{
+    font-size: 1rem;
+    margin: 5px 0;
+}
+
+header a{
+    font-weight: 500;
+    text-decoration: none;
+    color: #44d58f;
+    transition: all .2s;
+}
+header a:hover{
+    color: #44d58f;
+    font-weight: bold;
+    scale: 1.1;
+}
+
+.container {
+    padding: 1rem 14rem;
+}
+.container h1{
+    margin-bottom: 1rem;
+}
+
+#EVA {
+    width: 200px;
+    margin-left: 3rem;
+}
+.presentation {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: nowrap;
+    margin-bottom: 2rem;
+    align-items: center;
+    justify-content: center;
+}
+.presentation h1 {
+    max-width: 580px;
+    font-weight: 500;
+}
+.temas {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+}
+.card {
+    padding: .8rem 1.2rem;
+    background-color: white;
+    max-width: fit-content;
+    color: #27a557;
+    border-radius: 1rem;
+    border: 5px solid #27a557;
+    transition: all .1s;
+}
+.card:hover {
+    scale: 1.025;
+}
+
+.card h2{
+    color: #27a557;
+}
+.card p {
+    text-align: center;
+}
+
+.btn_accept {
+    appearance: none;
+    font-weight: bold;
+    color: white;
+    background-color: #27a557;
+    padding: 10px;
+    border-radius: 2rem;
+    margin: 1rem 0;
+    transition: all .1s;
+    border: none;
+    font-size: 1rem;
+}
+.btn_accept:hover {
+    scale: 1.1;
+    background-color: #1a8443;
+    cursor: pointer;
+}
+.hide{
+    display: none;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+}
+.center_col{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.white_bg{
+    background-color: white;
+    color: #1a8443;
+    padding: 1rem;
+    border-radius: 1rem;
+    border: 5px solid #27a557;
+}
+.white_bg h1, h2 {
+    margin: 10px 0;
+    text-align: center;
+}
+
+ol, ul {
+    margin-left: 1rem;
+}
+li {
+    margin-top: 1rem;
+}
+
+.options{
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem 1rem;
+}
+.options :hover{
+    cursor: pointer;
+}
+.option input{
+    appearance: none;
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    background-color: white;
+    border: 3px solid #27a557;
+    transition: all .2s;
+}
+.option label{
+    text-decoration: none;
+}
+.option label:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+.option input:checked{
+    background-color: #27a557;
+    border: 3px solid white;
+}
+.enunciado{
+    text-align: left;
+    font-size: 1rem;
+}
+.gap{
+    margin-bottom: 10px;
+}
+
+.wrong{
+    color: red;
+}
+.form_container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    background-color: white;
+    color: #1a8443;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    border: 5px solid #27a557;
+    width: max-content;
+}
+.form h1{
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+.input_text_form{
+    display: block;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid #1a8443;
+    margin-bottom: 1rem;
+    padding: 10px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    font-size: 16px;
+}
+.ok{
+    position: fixed;
+    width: 100%;
+    background-color: green;
+    color: #e8e8e8;
+    bottom: 0;
+    padding: 16px;
+}
+.error{
+    position: fixed;
+    width: 100%;
+    background-color: #b50000;
+    color: #e8e8e8;
+    bottom: 0;
+    padding: 16px;
+}
+
+table{
+    border:solid #27a557;
+    background-color: white;
+    width: 100%;
+}
+table td, th{
+    text-align: center;
+    color: #1a8443;
+    padding: 4px;
+}
+.leaderboard{
+    margin-top: 1rem;
+    background-color: #1a8443;
+    border-radius: 10px;
+}
+.leaderboard h2{
+    padding-top: 10px;
+}
+
+.notas{
+    margin-top: 1rem;
+    background-color: #1a8443;
+    border-radius: 30px;
+    padding: 0 2rem;
+    padding-top: .5rem;
+    padding-bottom: 1rem;
+    max-width: 650px;
+}
+.nota {
+    padding: .8rem 1.2rem;
+    background-color: white;
+    max-width: fit-content;
+    color: #27a557;
+    border-radius: 1rem;
+    border: 5px solid #27a557;
+    transition: all .1s;
+}
+.nota:hover {
+    scale: 1.025;
+}
+
+.nota h2{
+    color: #27a557;
+}
+.nota p {
+    text-align: center;
+}
+
+@media (max-width: 1150px){
+    .container {
+        padding: 1rem 4rem;
+    }
+    .presentation h1{
+        font-size: 1.6rem;
+    }
+    .temas{
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 650px) {
+    header{
+        margin-bottom: 1rem;
+        padding: 0.5rem;
+        font-size: .8rem;
+        gap: .8rem;
+    }
+    .container {
+        padding: 1rem 2rem;
+    }
+    .presentation{
+        flex-wrap: wrap;
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+    .presentation h1{
+        font-size: 1.5rem;
+    }
+    #EVA {
+        margin-left: 0;
+    }
+    h1 {
+        font-size: 1.5rem;
+    }
+    h2 {
+        font-size: 1.2rem;
+    }
+    .card {
+        padding: .6rem;
+        max-width: 288px;
+    }
+    .card h2 {
+        font-size: 1rem;
+        margin: 0px;
+    }
+    .card p {
+        font-size: 16px;
+    }
+    table td, th{
+        padding: 2px;
+        font-size: 14px;
+    }
+    .nota p {
+        font-size: .8rem;
+    }
+    .form{
+        padding: .8rem;
+    }
+}
+
+@media (max-width: 300px) {
+    header {
+        gap: .2rem .8rem;
+        flex-wrap: wrap;
+    }
+    .form h1{
+        font-size: .8rem;
+    }
+    .input_text_form{
+        font-size: 14px;
+    }
+    .error, .ok{
+        font-size: .5rem;
+    }
+    .white_bg h3{
+        font-size: 20px;
+    }
+    .white_bg{
+        font-size: 16px;
+    }
+}
