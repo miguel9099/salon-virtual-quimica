@@ -6,8 +6,8 @@ if (isset($_POST["registrar"])) {
     $email = trim($_POST['email']);
     $name = trim($_POST['name']);
     $lastname = trim($_POST['lastname']);
-    $pass = trim($_POST['pass']);
-    $pass2 = trim($_POST['pass2']);
+    $pass = md5(trim($_POST['pass']));
+    $pass2 = md5(trim($_POST['pass2']));
     if ($pass == $pass2) {
         $consulta = "SELECT * FROM users WHERE email = '$email' || user = '$user';";
         $resultado = mysqli_query($enlace, $consulta);
@@ -33,7 +33,7 @@ if (isset($_POST["registrar"])) {
         $users = mysqli_num_rows($resultado);
         if ($users > 0) {
             $data = mysqli_fetch_array($resultado);
-            if ($_REQUEST['pass'] == $data['password']) {
+            if (md5($_REQUEST['pass']) == $data['password']) {
                 $_SESSION['user_id'] = $data['id'];
 				$_SESSION['user'] = $data['user'];
 				$_SESSION['name'] = $data['name'];
